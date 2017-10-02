@@ -7,21 +7,72 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F3266DB1F7BE1460024A224 /* AccountBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3266DA1F7BE1460024A224 /* AccountBalanceViewController.swift */; };
+		9F3266DE1F7BE1DF0024A224 /* AccountPageMenuControllerForTicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3266DD1F7BE1DF0024A224 /* AccountPageMenuControllerForTicker.swift */; };
+		9F3266E31F7C0E180024A224 /* SweetHMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3266E21F7C0E180024A224 /* SweetHMAC.swift */; };
+		9F4825F11F7F669100D48688 /* AccountOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4825F01F7F669100D48688 /* AccountOrdersViewController.swift */; };
+		9F4825F41F7F6C3400D48688 /* OrdersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4825F31F7F6C3400D48688 /* OrdersCell.swift */; };
+		9F4825F61F7F8B8100D48688 /* ApiCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4825F51F7F8B8100D48688 /* ApiCall.swift */; };
+		9F4825FC1F7FDAB700D48688 /* MarketTradeController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F4825FB1F7FDAB700D48688 /* MarketTradeController.swift */; };
+		9F790B661F7E82BF00B3AA3B /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F790B651F7E82BF00B3AA3B /* StringExtensions.swift */; };
+		9F790B6A1F7E853100B3AA3B /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F790B691F7E853100B3AA3B /* TabBarController.swift */; };
+		9F790B6C1F7E868500B3AA3B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F790B6B1F7E868500B3AA3B /* LoginViewController.swift */; };
+		9F790B6E1F7E8F4C00B3AA3B /* BalanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F790B6D1F7E8F4C00B3AA3B /* BalanceCell.swift */; };
+		9F790B701F7EA94300B3AA3B /* AccountTradesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F790B6F1F7EA94300B3AA3B /* AccountTradesViewController.swift */; };
+		9F790B721F7EB6DD00B3AA3B /* TradeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F790B711F7EB6DD00B3AA3B /* TradeCell.swift */; };
 		9F99C0A31F7908E3002EB8CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99C0A21F7908E3002EB8CF /* AppDelegate.swift */; };
-		9F99C0A51F7908E3002EB8CF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99C0A41F7908E3002EB8CF /* ViewController.swift */; };
+		9F99C0A51F7908E3002EB8CF /* TickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99C0A41F7908E3002EB8CF /* TickerViewController.swift */; };
 		9F99C0A81F7908E3002EB8CF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F99C0A61F7908E3002EB8CF /* Main.storyboard */; };
 		9F99C0AA1F7908E3002EB8CF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9F99C0A91F7908E3002EB8CF /* Assets.xcassets */; };
 		9F99C0AD1F7908E3002EB8CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F99C0AB1F7908E3002EB8CF /* LaunchScreen.storyboard */; };
+		9F99C0B51F793F7D002EB8CF /* TickerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99C0B41F793F7D002EB8CF /* TickerCell.swift */; };
+		9F99C0BC1F795D5C002EB8CF /* ContainerForPageMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99C0BB1F795D5C002EB8CF /* ContainerForPageMenuController.swift */; };
+		9F99C0C01F7A5297002EB8CF /* PageMenuControllerForTicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99C0BF1F7A5297002EB8CF /* PageMenuControllerForTicker.swift */; };
+		9F99C0C21F7A54A3002EB8CF /* PriceLineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99C0C11F7A54A3002EB8CF /* PriceLineView.swift */; };
+		9F99C0C41F7A550A002EB8CF /* MarketInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99C0C31F7A550A002EB8CF /* MarketInfoController.swift */; };
+		9F99C0C61F7A62C2002EB8CF /* MarketInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99C0C51F7A62C2002EB8CF /* MarketInfoCell.swift */; };
+		9F99C0C81F7A7D48002EB8CF /* GraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99C0C71F7A7D48002EB8CF /* GraphView.swift */; };
+		9F99C0CB1F7A7E42002EB8CF /* MarketChartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F99C0CA1F7A7E42002EB8CF /* MarketChartController.swift */; };
+		9FFA43D11F8277C60001A0E1 /* MarketOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA43D01F8277C60001A0E1 /* MarketOrdersViewController.swift */; };
+		9FFA43D41F82799A0001A0E1 /* MarketTradesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FFA43D31F82799A0001A0E1 /* MarketTradesViewController.swift */; };
+		F1B7AA734AF4E4F0C9FF8A1F /* Pods_CryptopiaTrader.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF4F5EE320EC949034EB4FE0 /* Pods_CryptopiaTrader.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4BE76CEE5F85D70D72748CE6 /* Pods-CryptopiaTrader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptopiaTrader.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptopiaTrader/Pods-CryptopiaTrader.release.xcconfig"; sourceTree = "<group>"; };
+		9F3266DA1F7BE1460024A224 /* AccountBalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceViewController.swift; sourceTree = "<group>"; };
+		9F3266DD1F7BE1DF0024A224 /* AccountPageMenuControllerForTicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPageMenuControllerForTicker.swift; sourceTree = "<group>"; };
+		9F3266E11F7BEE970024A224 /* CryptopiaTrader-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CryptopiaTrader-Bridging-Header.h"; sourceTree = "<group>"; };
+		9F3266E21F7C0E180024A224 /* SweetHMAC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SweetHMAC.swift; sourceTree = "<group>"; };
+		9F4825F01F7F669100D48688 /* AccountOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountOrdersViewController.swift; sourceTree = "<group>"; };
+		9F4825F31F7F6C3400D48688 /* OrdersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersCell.swift; sourceTree = "<group>"; };
+		9F4825F51F7F8B8100D48688 /* ApiCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiCall.swift; sourceTree = "<group>"; };
+		9F4825FB1F7FDAB700D48688 /* MarketTradeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketTradeController.swift; sourceTree = "<group>"; };
+		9F790B651F7E82BF00B3AA3B /* StringExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringExtensions.swift; sourceTree = "<group>"; };
+		9F790B691F7E853100B3AA3B /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		9F790B6B1F7E868500B3AA3B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		9F790B6D1F7E8F4C00B3AA3B /* BalanceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceCell.swift; sourceTree = "<group>"; };
+		9F790B6F1F7EA94300B3AA3B /* AccountTradesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountTradesViewController.swift; sourceTree = "<group>"; };
+		9F790B711F7EB6DD00B3AA3B /* TradeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TradeCell.swift; sourceTree = "<group>"; };
 		9F99C09F1F7908E3002EB8CF /* CryptopiaTrader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptopiaTrader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F99C0A21F7908E3002EB8CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9F99C0A41F7908E3002EB8CF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9F99C0A41F7908E3002EB8CF /* TickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerViewController.swift; sourceTree = "<group>"; };
 		9F99C0A71F7908E3002EB8CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9F99C0A91F7908E3002EB8CF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9F99C0AC1F7908E3002EB8CF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9F99C0AE1F7908E3002EB8CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9F99C0B41F793F7D002EB8CF /* TickerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerCell.swift; sourceTree = "<group>"; };
+		9F99C0BB1F795D5C002EB8CF /* ContainerForPageMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerForPageMenuController.swift; sourceTree = "<group>"; };
+		9F99C0BF1F7A5297002EB8CF /* PageMenuControllerForTicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageMenuControllerForTicker.swift; sourceTree = "<group>"; };
+		9F99C0C11F7A54A3002EB8CF /* PriceLineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceLineView.swift; sourceTree = "<group>"; };
+		9F99C0C31F7A550A002EB8CF /* MarketInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketInfoController.swift; sourceTree = "<group>"; };
+		9F99C0C51F7A62C2002EB8CF /* MarketInfoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketInfoCell.swift; sourceTree = "<group>"; };
+		9F99C0C71F7A7D48002EB8CF /* GraphView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphView.swift; sourceTree = "<group>"; };
+		9F99C0CA1F7A7E42002EB8CF /* MarketChartController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketChartController.swift; sourceTree = "<group>"; };
+		9FFA43D01F8277C60001A0E1 /* MarketOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketOrdersViewController.swift; sourceTree = "<group>"; };
+		9FFA43D31F82799A0001A0E1 /* MarketTradesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarketTradesViewController.swift; sourceTree = "<group>"; };
+		AF4F5EE320EC949034EB4FE0 /* Pods_CryptopiaTrader.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptopiaTrader.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0813D289F130B03D4855ABB /* Pods-CryptopiaTrader.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptopiaTrader.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptopiaTrader/Pods-CryptopiaTrader.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +80,83 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1B7AA734AF4E4F0C9FF8A1F /* Pods_CryptopiaTrader.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9F3266DC1F7BE14D0024A224 /* Account */ = {
+			isa = PBXGroup;
+			children = (
+				9F4825F21F7F66AC00D48688 /* Orders */,
+				9F790B731F7EBA8600B3AA3B /* Trades */,
+				9F790B741F7EBA9100B3AA3B /* Balance */,
+				9F3266DD1F7BE1DF0024A224 /* AccountPageMenuControllerForTicker.swift */,
+			);
+			path = Account;
+			sourceTree = "<group>";
+		};
+		9F4825F21F7F66AC00D48688 /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				9F4825F01F7F669100D48688 /* AccountOrdersViewController.swift */,
+				9F4825F31F7F6C3400D48688 /* OrdersCell.swift */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		9F4825F71F7FDA5F00D48688 /* Info */ = {
+			isa = PBXGroup;
+			children = (
+				9F99C0C31F7A550A002EB8CF /* MarketInfoController.swift */,
+				9F99C0C51F7A62C2002EB8CF /* MarketInfoCell.swift */,
+			);
+			path = Info;
+			sourceTree = "<group>";
+		};
+		9F4825F81F7FDA6700D48688 /* Chart */ = {
+			isa = PBXGroup;
+			children = (
+				9F99C0CA1F7A7E42002EB8CF /* MarketChartController.swift */,
+			);
+			path = Chart;
+			sourceTree = "<group>";
+		};
+		9F4825FA1F7FDA7800D48688 /* Trade */ = {
+			isa = PBXGroup;
+			children = (
+				9F4825FB1F7FDAB700D48688 /* MarketTradeController.swift */,
+			);
+			path = Trade;
+			sourceTree = "<group>";
+		};
+		9F790B731F7EBA8600B3AA3B /* Trades */ = {
+			isa = PBXGroup;
+			children = (
+				9F790B6F1F7EA94300B3AA3B /* AccountTradesViewController.swift */,
+				9F790B711F7EB6DD00B3AA3B /* TradeCell.swift */,
+			);
+			path = Trades;
+			sourceTree = "<group>";
+		};
+		9F790B741F7EBA9100B3AA3B /* Balance */ = {
+			isa = PBXGroup;
+			children = (
+				9F3266DA1F7BE1460024A224 /* AccountBalanceViewController.swift */,
+				9F790B6D1F7E8F4C00B3AA3B /* BalanceCell.swift */,
+			);
+			path = Balance;
+			sourceTree = "<group>";
+		};
 		9F99C0961F7908E3002EB8CF = {
 			isa = PBXGroup;
 			children = (
 				9F99C0A11F7908E3002EB8CF /* CryptopiaTrader */,
 				9F99C0A01F7908E3002EB8CF /* Products */,
+				D6BAB12116F83D912B5EAA9D /* Pods */,
+				D2271B19C9A0371F4EDB4DA1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +171,96 @@
 		9F99C0A11F7908E3002EB8CF /* CryptopiaTrader */ = {
 			isa = PBXGroup;
 			children = (
-				9F99C0A21F7908E3002EB8CF /* AppDelegate.swift */,
-				9F99C0A41F7908E3002EB8CF /* ViewController.swift */,
-				9F99C0A61F7908E3002EB8CF /* Main.storyboard */,
-				9F99C0A91F7908E3002EB8CF /* Assets.xcassets */,
-				9F99C0AB1F7908E3002EB8CF /* LaunchScreen.storyboard */,
 				9F99C0AE1F7908E3002EB8CF /* Info.plist */,
+				9F99C0A61F7908E3002EB8CF /* Main.storyboard */,
+				9F790B6B1F7E868500B3AA3B /* LoginViewController.swift */,
+				9F790B691F7E853100B3AA3B /* TabBarController.swift */,
+				9F99C0C91F7A7D51002EB8CF /* Models */,
+				9F3266DC1F7BE14D0024A224 /* Account */,
+				9F99C0BA1F795D26002EB8CF /* TickerDetail */,
+				9F99C0B81F795CFB002EB8CF /* TickerList */,
+				9F99C0B91F795D11002EB8CF /* Other */,
+				9F3266E11F7BEE970024A224 /* CryptopiaTrader-Bridging-Header.h */,
 			);
 			path = CryptopiaTrader;
+			sourceTree = "<group>";
+		};
+		9F99C0B81F795CFB002EB8CF /* TickerList */ = {
+			isa = PBXGroup;
+			children = (
+				9F99C0A41F7908E3002EB8CF /* TickerViewController.swift */,
+				9F99C0B41F793F7D002EB8CF /* TickerCell.swift */,
+			);
+			path = TickerList;
+			sourceTree = "<group>";
+		};
+		9F99C0B91F795D11002EB8CF /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				9F99C0A21F7908E3002EB8CF /* AppDelegate.swift */,
+				9F99C0A91F7908E3002EB8CF /* Assets.xcassets */,
+				9F99C0AB1F7908E3002EB8CF /* LaunchScreen.storyboard */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		9F99C0BA1F795D26002EB8CF /* TickerDetail */ = {
+			isa = PBXGroup;
+			children = (
+				9FFA43D51F8279A40001A0E1 /* Trades */,
+				9F4825F81F7FDA6700D48688 /* Chart */,
+				9F4825F71F7FDA5F00D48688 /* Info */,
+				9F4825FA1F7FDA7800D48688 /* Trade */,
+				9FFA43D21F8277D40001A0E1 /* Orders */,
+				9F99C0BB1F795D5C002EB8CF /* ContainerForPageMenuController.swift */,
+				9F99C0BF1F7A5297002EB8CF /* PageMenuControllerForTicker.swift */,
+			);
+			path = TickerDetail;
+			sourceTree = "<group>";
+		};
+		9F99C0C91F7A7D51002EB8CF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9F4825F51F7F8B8100D48688 /* ApiCall.swift */,
+				9F790B651F7E82BF00B3AA3B /* StringExtensions.swift */,
+				9F3266E21F7C0E180024A224 /* SweetHMAC.swift */,
+				9F99C0C11F7A54A3002EB8CF /* PriceLineView.swift */,
+				9F99C0C71F7A7D48002EB8CF /* GraphView.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9FFA43D21F8277D40001A0E1 /* Orders */ = {
+			isa = PBXGroup;
+			children = (
+				9FFA43D01F8277C60001A0E1 /* MarketOrdersViewController.swift */,
+			);
+			path = Orders;
+			sourceTree = "<group>";
+		};
+		9FFA43D51F8279A40001A0E1 /* Trades */ = {
+			isa = PBXGroup;
+			children = (
+				9FFA43D31F82799A0001A0E1 /* MarketTradesViewController.swift */,
+			);
+			path = Trades;
+			sourceTree = "<group>";
+		};
+		D2271B19C9A0371F4EDB4DA1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AF4F5EE320EC949034EB4FE0 /* Pods_CryptopiaTrader.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D6BAB12116F83D912B5EAA9D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F0813D289F130B03D4855ABB /* Pods-CryptopiaTrader.debug.xcconfig */,
+				4BE76CEE5F85D70D72748CE6 /* Pods-CryptopiaTrader.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +270,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9F99C0B11F7908E3002EB8CF /* Build configuration list for PBXNativeTarget "CryptopiaTrader" */;
 			buildPhases = (
+				9CA49EC5653A22A9F93276DA /* [CP] Check Pods Manifest.lock */,
 				9F99C09B1F7908E3002EB8CF /* Sources */,
 				9F99C09C1F7908E3002EB8CF /* Frameworks */,
 				9F99C09D1F7908E3002EB8CF /* Resources */,
+				CDAE90B6F7B6654881A47D2C /* [CP] Embed Pods Frameworks */,
+				24199BCCE31552A9A6BD9622 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,13 +333,102 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		24199BCCE31552A9A6BD9622 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptopiaTrader/Pods-CryptopiaTrader-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CA49EC5653A22A9F93276DA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CryptopiaTrader-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDAE90B6F7B6654881A47D2C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CryptopiaTrader/Pods-CryptopiaTrader-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CommonCrypto/CommonCrypto.framework",
+				"${BUILT_PRODUCTS_DIR}/CryptoSwift/CryptoSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/JSSAlertView/JSSAlertView.framework",
+				"${BUILT_PRODUCTS_DIR}/PageMenu/PageMenu.framework",
+				"${BUILT_PRODUCTS_DIR}/Parchment/Parchment.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyBase64/SwiftyBase64.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CommonCrypto.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CryptoSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSSAlertView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PageMenu.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Parchment.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyBase64.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CryptopiaTrader/Pods-CryptopiaTrader-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		9F99C09B1F7908E3002EB8CF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F99C0A51F7908E3002EB8CF /* ViewController.swift in Sources */,
+				9F99C0CB1F7A7E42002EB8CF /* MarketChartController.swift in Sources */,
+				9F790B6A1F7E853100B3AA3B /* TabBarController.swift in Sources */,
+				9FFA43D11F8277C60001A0E1 /* MarketOrdersViewController.swift in Sources */,
+				9FFA43D41F82799A0001A0E1 /* MarketTradesViewController.swift in Sources */,
+				9F99C0C21F7A54A3002EB8CF /* PriceLineView.swift in Sources */,
+				9F99C0C01F7A5297002EB8CF /* PageMenuControllerForTicker.swift in Sources */,
+				9F4825F61F7F8B8100D48688 /* ApiCall.swift in Sources */,
+				9F3266DE1F7BE1DF0024A224 /* AccountPageMenuControllerForTicker.swift in Sources */,
+				9F99C0C81F7A7D48002EB8CF /* GraphView.swift in Sources */,
+				9F3266DB1F7BE1460024A224 /* AccountBalanceViewController.swift in Sources */,
+				9F99C0A51F7908E3002EB8CF /* TickerViewController.swift in Sources */,
+				9F790B721F7EB6DD00B3AA3B /* TradeCell.swift in Sources */,
+				9F4825F11F7F669100D48688 /* AccountOrdersViewController.swift in Sources */,
+				9F99C0BC1F795D5C002EB8CF /* ContainerForPageMenuController.swift in Sources */,
+				9F4825FC1F7FDAB700D48688 /* MarketTradeController.swift in Sources */,
+				9F99C0C41F7A550A002EB8CF /* MarketInfoController.swift in Sources */,
 				9F99C0A31F7908E3002EB8CF /* AppDelegate.swift in Sources */,
+				9F790B661F7E82BF00B3AA3B /* StringExtensions.swift in Sources */,
+				9F4825F41F7F6C3400D48688 /* OrdersCell.swift in Sources */,
+				9F790B6C1F7E868500B3AA3B /* LoginViewController.swift in Sources */,
+				9F790B701F7EA94300B3AA3B /* AccountTradesViewController.swift in Sources */,
+				9F3266E31F7C0E180024A224 /* SweetHMAC.swift in Sources */,
+				9F790B6E1F7E8F4C00B3AA3B /* BalanceCell.swift in Sources */,
+				9F99C0B51F793F7D002EB8CF /* TickerCell.swift in Sources */,
+				9F99C0C61F7A62C2002EB8CF /* MarketInfoCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +507,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/florinuscatu/Documents/xcodeProjects/CryptopiaTrader/CryptopiaTrader/CryptopiaTrader-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
@@ -265,6 +557,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/florinuscatu/Documents/xcodeProjects/CryptopiaTrader/CryptopiaTrader/CryptopiaTrader-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -272,6 +565,7 @@
 		};
 		9F99C0B21F7908E3002EB8CF /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F0813D289F130B03D4855ABB /* Pods-CryptopiaTrader.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +581,7 @@
 		};
 		9F99C0B31F7908E3002EB8CF /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4BE76CEE5F85D70D72748CE6 /* Pods-CryptopiaTrader.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
