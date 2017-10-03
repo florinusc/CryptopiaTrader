@@ -91,12 +91,14 @@ class AccountBalanceViewController: UITableViewController {
                 }
             }
         } else {
-            self.balanceRefreshControl.endRefreshing()
-            JSSAlertView().danger(
-                self,
-                title: "Log in",
-                text: "Please log in to see balances"
-            )
+            DispatchQueue.main.async {
+                self.balanceRefreshControl.endRefreshing()
+                JSSAlertView().danger(
+                    self,
+                    title: "Log in",
+                    text: "Please log in to see balances"
+                )
+            }
         }
     }
 
@@ -109,7 +111,28 @@ class AccountBalanceViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return balanceArray.count
+        var numberOfRows: Int = 0
+        let noDataLabel: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
+        let emptyView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
+        noDataLabel.textAlignment = .center
+        noDataLabel.textColor = UIColor.black
+        
+        if key != "" && secret != "" {
+            if balanceArray.count > 0 {
+                numberOfRows = balanceArray.count
+                tableView.backgroundView = emptyView
+                tableView.separatorStyle = .singleLine
+            } else {
+                noDataLabel.text = "No data to show"
+                tableView.separatorStyle = .none
+                tableView.backgroundView = noDataLabel
+            }
+        } else {
+            noDataLabel.text = "Please log in to see orders"
+            tableView.separatorStyle = .none
+            tableView.backgroundView = noDataLabel
+        }
+        return numberOfRows
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

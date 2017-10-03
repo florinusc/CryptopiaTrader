@@ -207,11 +207,11 @@
 		9F99C0BA1F795D26002EB8CF /* TickerDetail */ = {
 			isa = PBXGroup;
 			children = (
+				9FFA43D21F8277D40001A0E1 /* Orders */,
 				9FFA43D51F8279A40001A0E1 /* Trades */,
 				9F4825F81F7FDA6700D48688 /* Chart */,
 				9F4825F71F7FDA5F00D48688 /* Info */,
 				9F4825FA1F7FDA7800D48688 /* Trade */,
-				9FFA43D21F8277D40001A0E1 /* Orders */,
 				9F99C0BB1F795D5C002EB8CF /* ContainerForPageMenuController.swift */,
 				9F99C0BF1F7A5297002EB8CF /* PageMenuControllerForTicker.swift */,
 			);

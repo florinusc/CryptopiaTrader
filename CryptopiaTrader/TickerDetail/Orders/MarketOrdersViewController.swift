@@ -81,11 +81,13 @@ class MarketOrdersViewController: UITableViewController {
             }
         } else {
             self.ordersRefreshControl.endRefreshing()
-            JSSAlertView().danger(
-                self,
-                title: "Log in",
-                text: "Please log in to see orders"
-            )
+            DispatchQueue.main.async {
+                JSSAlertView().danger(
+                    self,
+                    title: "Log in",
+                    text: "Please log in to see orders"
+                )
+            }
         }
     }
     
@@ -98,7 +100,31 @@ class MarketOrdersViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return ordersArray.count
+        var numberOfRows: Int = 0
+        let noDataLabel: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
+        let emptyView: UIView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: tableView.bounds.size.height))
+        noDataLabel.textAlignment = .center
+        noDataLabel.textColor = UIColor.black
+        
+        if key != "" && secret != "" {
+            if ordersArray.count > 0 {
+                numberOfRows = ordersArray.count
+                headerView.isHidden = false
+                tableView.backgroundView = emptyView
+                tableView.separatorStyle = .singleLine
+            } else {
+                noDataLabel.text = "No data to show"
+                tableView.separatorStyle = .none
+                tableView.backgroundView = noDataLabel
+                headerView.isHidden = true
+            }
+        } else {
+            noDataLabel.text = "Please log in to see orders"
+            tableView.separatorStyle = .none
+            tableView.backgroundView = noDataLabel
+            headerView.isHidden = true
+        }
+        return numberOfRows
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
