@@ -72,18 +72,27 @@ class AccountTradesViewController: UITableViewController {
     }
     
     func requestDataLocally() {
-        ApiCalls().requestData(publicType: false, method: "GetTradeHistory", parameters: [:], key: key, secret: secret) { (data) in
-            do {
-                let tempArray = try JSONDecoder().decode(Trades.self, from: data)
-                self.tradesArray = tempArray.Data
-                DispatchQueue.main.async {
+        if key != "" && secret != "" {
+            ApiCalls().requestData(publicType: false, method: "GetTradeHistory", parameters: [:], key: key, secret: secret) { (data) in
+                do {
+                    let tempArray = try JSONDecoder().decode(Trades.self, from: data)
+                    self.tradesArray = tempArray.Data
+                    DispatchQueue.main.async {
+                        self.tradesRefreshControl.endRefreshing()
+                        self.tableView.reloadData()
+                    }
+                } catch let err {
                     self.tradesRefreshControl.endRefreshing()
-                    self.tableView.reloadData()
+                    print(err)
                 }
-            } catch let err {
-                self.tradesRefreshControl.endRefreshing()
-                print(err)
             }
+        } else {
+            self.tradesRefreshControl.endRefreshing()
+            JSSAlertView().danger(
+                self,
+                title: "Log in",
+                text: "Please log in to see trades"
+            )
         }
     }
     

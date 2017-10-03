@@ -63,18 +63,29 @@ class MarketOrdersViewController: UITableViewController {
     }
     
     func requestDataLocally() {
-        ApiCalls().requestData(publicType: false, method: "GetOpenOrders", parameters: ["TradePairId":coinId], key: key, secret: secret) { (data) in
-            do {
-                let tempArray = try JSONDecoder().decode(Orders.self, from: data)
-                self.ordersArray = tempArray.Data
-                DispatchQueue.main.async {
+        
+        if key != "" && secret != "" {
+        
+            ApiCalls().requestData(publicType: false, method: "GetOpenOrders", parameters: ["TradePairId":coinId], key: key, secret: secret) { (data) in
+                do {
+                    let tempArray = try JSONDecoder().decode(Orders.self, from: data)
+                    self.ordersArray = tempArray.Data
+                    DispatchQueue.main.async {
+                        self.ordersRefreshControl.endRefreshing()
+                        self.tableView.reloadData()
+                    }
+                } catch let err {
+                    print(err)
                     self.ordersRefreshControl.endRefreshing()
-                    self.tableView.reloadData()
                 }
-            } catch let err {
-                print(err)
-                self.ordersRefreshControl.endRefreshing()
             }
+        } else {
+            self.ordersRefreshControl.endRefreshing()
+            JSSAlertView().danger(
+                self,
+                title: "Log in",
+                text: "Please log in to see orders"
+            )
         }
     }
     

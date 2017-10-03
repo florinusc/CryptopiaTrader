@@ -76,18 +76,27 @@ class AccountBalanceViewController: UITableViewController {
     }
     
     func requestDataLocally() {
-        ApiCalls().requestData(publicType: false, method: "GetBalance", parameters: [:], key: key, secret: secret) { (data) in
-            do {
-                let tempArray = try JSONDecoder().decode(Balances.self, from: data)
-                self.balanceArray = tempArray.Data.filter {$0.Total > 0.0}
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
+        if key != "" && secret != "" {
+            ApiCalls().requestData(publicType: false, method: "GetBalance", parameters: [:], key: key, secret: secret) { (data) in
+                do {
+                    let tempArray = try JSONDecoder().decode(Balances.self, from: data)
+                    self.balanceArray = tempArray.Data.filter {$0.Total > 0.0}
+                    DispatchQueue.main.async {
+                        self.tableView.reloadData()
+                        self.balanceRefreshControl.endRefreshing()
+                    }
+                } catch let err {
+                    print(err)
                     self.balanceRefreshControl.endRefreshing()
                 }
-            } catch let err {
-                print(err)
-                self.balanceRefreshControl.endRefreshing()
             }
+        } else {
+            self.balanceRefreshControl.endRefreshing()
+            JSSAlertView().danger(
+                self,
+                title: "Log in",
+                text: "Please log in to see balances"
+            )
         }
     }
 
