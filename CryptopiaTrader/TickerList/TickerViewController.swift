@@ -178,7 +178,7 @@ class TickerViewController: UITableViewController {
         if pairArray[indexPath.row].Change < 0 {
             cell.changeLabel.textColor = UIColor.red
         } else {
-            cell.changeLabel.textColor = UIColor.green
+            cell.changeLabel.textColor = UIColor(red: 81/255, green: 185/255, blue: 91/255, alpha: 1)
         }
         
         return cell
@@ -215,9 +215,6 @@ class TickerViewController: UITableViewController {
             destinationVC?.coinId = selectedCoinId
         }
     }
-    
-    
-    @IBOutlet weak var coinListTabBarItem: UITabBarItem!
     
 }
 

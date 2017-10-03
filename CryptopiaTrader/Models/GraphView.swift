@@ -25,6 +25,8 @@ struct ChartData: Decodable {
     
     var averageValueLabel = UILabel()
     
+    let errorLabel = UILabel()
+    
     var denomination: String = ""
     
     var graphData:[ChartData] = [] {
@@ -147,7 +149,7 @@ struct ChartData: Decodable {
     }
     
     func drawGraph() {
-        backgroundColor = UIColor.clear
+        backgroundColor = UIColor.white
         
 //        gl.frame = bounds
 //        gl.colors = [startColor, endColor]
@@ -172,6 +174,8 @@ struct ChartData: Decodable {
 //        layer.mask = graphBackground
         
         if graphData.count > 3 {
+            
+            errorLabel.removeFromSuperview()
             
             let yPadding = CGFloat(40)
             let xPadding = CGFloat(15)
@@ -211,15 +215,17 @@ struct ChartData: Decodable {
                 
                 let limit = Int(dateStrings.count / 5)
                 
-                if i % limit == 0 {
-                    let xPosition = ((frame.bounds.width - 2*xPadding - 30)/CGFloat(graphData.count - 1)) * CGFloat(i) + xPadding - 5
-                    let countingLabel = UILabel(frame: CGRect(x: xPosition, y: frame.bounds.height - 20, width: 40, height: 20))
-                    countingLabel.text = "\(dateString)"
-                    countingLabel.textAlignment = .center
-                    countingLabel.font = UIFont(name: "Helvetica", size: 9)
-                    countingLabel.textColor = UIColor.black
-                    self.addSubview(countingLabel)
+                if let division = i % limit as? Int {
+                    if division == 0 {
+                        let xPosition = ((frame.bounds.width - 2*xPadding - 30)/CGFloat(graphData.count - 1)) * CGFloat(i) + xPadding - 5
+                        let countingLabel = UILabel(frame: CGRect(x: xPosition, y: frame.bounds.height - 20, width: 40, height: 20))
+                        countingLabel.text = "\(dateString)"
+                        countingLabel.textAlignment = .center
+                        countingLabel.font = UIFont(name: "Helvetica", size: 9)
+                        countingLabel.textColor = UIColor.black
+                        self.addSubview(countingLabel)
 
+                    }
                 }
                 
             }
@@ -283,19 +289,16 @@ struct ChartData: Decodable {
             layer.addSublayer(graphCandleBodyLayer)
             
         } else {
-//            
-//            print("showing error label")
-//            
-//            let errorLabel = UILabel()
-//            
-//            errorLabel.frame = CGRect(x: self.bounds.width/2 - 125, y: self.bounds.height/2 - 10 , width: 250, height: 20)
-//            errorLabel.font = UIFont(name: "Helvetica", size: 12)
-//            errorLabel.text = "There are not enough entries to draw a graph"
-//            errorLabel.textColor = UIColor.black
-//            errorLabel.isHidden = false
-//            errorLabel.textAlignment = .center
-//            
-//            self.addSubview(errorLabel)
+            print("showing error label")
+            
+            errorLabel.frame = CGRect(x: self.bounds.width/2 - 125, y: self.bounds.height/2 - 10 , width: 250, height: 20)
+            errorLabel.font = UIFont(name: "Helvetica", size: 12)
+            errorLabel.text = "There are not enough entries to draw a graph"
+            errorLabel.textColor = UIColor.black
+            errorLabel.isHidden = false
+            errorLabel.textAlignment = .center
+            
+            self.addSubview(errorLabel)
         }
         
     }

@@ -9,6 +9,11 @@
 import Foundation
 
 extension String {
+    
+    func toDouble() -> Double? {
+        return NumberFormatter().number(from: self)?.doubleValue
+    }
+    
     func digest(algorithm: CustomHMACAlgorithm, key: String) -> String! {
         let str = self.cString(using: String.Encoding.utf8)
         let strLen = UInt(self.lengthOfBytes(using: String.Encoding.utf8))

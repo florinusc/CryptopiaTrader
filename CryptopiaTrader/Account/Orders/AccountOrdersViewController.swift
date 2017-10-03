@@ -58,6 +58,9 @@ class AccountOrdersViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Customize cancel button
+        cancelOrderBttn.layer.cornerRadius = 8.0
+        
         //Setup for refresh control
         ordersRefreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
         ordersRefreshControl.addTarget(self, action: #selector(AccountOrdersViewController.refresh), for: .allEvents)
@@ -122,7 +125,7 @@ class AccountOrdersViewController: UITableViewController {
         
         switch ordersArray[indexPath.row].Type {
         case "Buy":
-            cell.type.textColor = UIColor.green
+            cell.type.textColor = UIColor(red: 81/255, green: 185/255, blue: 91/255, alpha: 1)
         case "Sell":
             cell.type.textColor = UIColor.red
         default:

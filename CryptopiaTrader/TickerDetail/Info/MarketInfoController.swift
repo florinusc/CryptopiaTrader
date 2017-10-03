@@ -90,7 +90,7 @@ class MarketInfoController: UITableViewController {
                 if tempInfo.Change < 0.0 {
                     cell.numberLabel.textColor = UIColor.red
                 } else {
-                    cell.numberLabel.textColor = UIColor.green
+                    cell.numberLabel.textColor = UIColor(red: 81/255, green: 185/255, blue: 91/255, alpha: 1)
                 }
             case 2:
                 cell.descriptionLabel.text = "High"

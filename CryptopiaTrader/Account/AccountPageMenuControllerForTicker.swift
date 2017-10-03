@@ -44,8 +44,11 @@ class AccountPageMenuControllerForTicker: UIViewController {
 
 // The options used for both paging view controllers
 struct PageMenuTheme: PagingTheme {
-    let indicatorColor: UIColor = UIColor.black
-    let selectedTextColor: UIColor = UIColor.black
+    let indicatorColor: UIColor = UIColor.white
+    let selectedTextColor: UIColor = UIColor.white
+    let textColor: UIColor = UIColor(red: 40/255, green: 43/255, blue: 53/255, alpha: 1)
+    let backgroundColor: UIColor = UIColor(red: 90/255, green: 99/255, blue: 112/255, alpha: 1)
+    let headerBackgroundColor: UIColor = UIColor(red: 90/255, green: 99/255, blue: 112/255, alpha: 1)
 }
 
 struct PageMenuOptions: PagingOptions {
