@@ -196,7 +196,7 @@ struct ChartData: Decodable {
                 let yPosition = ySegments * (CGFloat(maxValue) - CGFloat(value)) + yPadding
                 
                 let valueLabel = UILabel(frame: CGRect(x: frame.bounds.width - CGFloat(40), y: yPosition - 10, width: 40, height: 20))
-                valueLabel.font = UIFont(name: "Helvetica", size: 5)
+                valueLabel.font = UIFont(name: "Helvetica", size: 7)
                 valueLabel.text = String(format: "%.8f", value)
                 valueLabel.textColor = UIColor.black
                 self.addSubview(valueLabel)

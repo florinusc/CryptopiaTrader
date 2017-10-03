@@ -10,7 +10,7 @@ import UIKit
 import Parchment
 
 class AccountPageMenuControllerForTicker: UIViewController {
-        
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,7 +28,8 @@ class AccountPageMenuControllerForTicker: UIViewController {
         ordersViewController.title = "Orders"
         controllerArray.append(ordersViewController)
         
-        let pagingViewController = FixedPagingViewController(viewControllers: controllerArray)
+        let pagingViewController = FixedPagingViewController(viewControllers: controllerArray, options: PageMenuOptions())
+        
         
         // Make sure you add the PagingViewController as a child view
         // controller and contrain it to the edges of the view.
@@ -37,7 +38,16 @@ class AccountPageMenuControllerForTicker: UIViewController {
         view.constrainToEdges(pagingViewController.view)
         pagingViewController.didMove(toParentViewController: self)
     }
-    
+}
 
-        
+
+
+// The options used for both paging view controllers
+struct PageMenuTheme: PagingTheme {
+    let indicatorColor: UIColor = UIColor.black
+    let selectedTextColor: UIColor = UIColor.black
+}
+
+struct PageMenuOptions: PagingOptions {
+    let theme: PagingTheme = PageMenuTheme()
 }

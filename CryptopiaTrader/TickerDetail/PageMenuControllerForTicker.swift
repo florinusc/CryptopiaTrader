@@ -50,7 +50,7 @@ class PageMenuControllerForTicker: UIViewController {
         tradesViewController.title = "Trades"
         controllerArray.append(tradesViewController)
 
-        let pagingViewController = FixedPagingViewController(viewControllers: controllerArray)
+        let pagingViewController = FixedPagingViewController(viewControllers: controllerArray, options: PageMenuOptions())
         
         // Make sure you add the PagingViewController as a child view
         // controller and contrain it to the edges of the view.

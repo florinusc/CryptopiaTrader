@@ -20,6 +20,12 @@ class LoginViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        loginBttnOutlet.layer.cornerRadius = 8.0
+    }
+    
+    @IBOutlet weak var loginBttnOutlet: UIButton!
     @IBAction func loginBttn(_ sender: UIButton) {
         
         if !(keyTxtfld.text?.isEmpty)! && !(secretTxtfld.text?.isEmpty)! {

@@ -53,6 +53,8 @@ class MarketTradeController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        placeOrderBttnOutlet.layer.cornerRadius = 8.0
+        
         let coinPairArr = coinPair.split(separator: "/")
         
         //Setting up segment control
@@ -99,9 +101,10 @@ class MarketTradeController: UITableViewController {
         }
     }
     
+    @IBOutlet weak var placeOrderBttnOutlet: UIButton!
     @IBAction func placeOrder(_ sender: UIButton) {
         
-        if rateTxtFld.text != nil && amountTxtFld.text != nil {
+        if rateTxtFld.text != "" && amountTxtFld.text != "" {
             guard let tradeType: String = typeSegControlOutlet.titleForSegment(at: typeSegControlOutlet.selectedSegmentIndex) else {return}
             guard let rate: Double = Double(rateTxtFld.text as! String) else {return}
             guard let amount: Double = Double(amountTxtFld.text as! String) else {return}

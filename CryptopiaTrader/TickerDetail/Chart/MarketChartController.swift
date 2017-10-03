@@ -38,6 +38,7 @@ class MarketChartController: UITableViewController {
     }
     
     
+    @IBOutlet weak var buildChartBttnOutlet: UIButton!
     @IBAction func buildChartBttn(_ sender: UIButton) {
         
         let selectedSpan = spans[timeSpanSegCtrl.selectedSegmentIndex]
@@ -52,6 +53,8 @@ class MarketChartController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        buildChartBttnOutlet.layer.cornerRadius = 8.0
         
         requestData(internalCoinId: coinId, timeFrame: 1440)
         denomination = String(coinPair.split(separator: "/")[1])
@@ -136,7 +139,7 @@ class MarketChartController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 132
+        return 150
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

@@ -90,10 +90,10 @@
 		9F3266DC1F7BE14D0024A224 /* Account */ = {
 			isa = PBXGroup;
 			children = (
+				9F3266DD1F7BE1DF0024A224 /* AccountPageMenuControllerForTicker.swift */,
 				9F4825F21F7F66AC00D48688 /* Orders */,
 				9F790B731F7EBA8600B3AA3B /* Trades */,
 				9F790B741F7EBA9100B3AA3B /* Balance */,
-				9F3266DD1F7BE1DF0024A224 /* AccountPageMenuControllerForTicker.swift */,
 			);
 			path = Account;
 			sourceTree = "<group>";

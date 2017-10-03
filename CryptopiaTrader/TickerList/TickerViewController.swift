@@ -46,7 +46,7 @@ class TickerViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         //Set title
-        self.title = "Cryptopia"
+        self.title = "Cryptopia"        
         
         // Request the data for the first time
         requestDataLocally(sortedBy: "Coin")
@@ -217,6 +217,7 @@ class TickerViewController: UITableViewController {
     }
     
     
+    @IBOutlet weak var coinListTabBarItem: UITabBarItem!
     
 }
 
