@@ -524,11 +524,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="cgb-rB-ZkS">
-                            <rect key="frame" x="0.0" y="217" width="375" height="76"/>
+                            <rect key="frame" x="0.0" y="277" width="375" height="102"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OqX-Gv-hrl">
-                                    <rect key="frame" x="8" y="15" width="359" height="50"/>
+                                    <rect key="frame" x="8" y="41" width="359" height="50"/>
                                     <color key="backgroundColor" red="0.35294117650000001" green="0.38823529410000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="height" constant="50" id="9F7-hB-jke"/>
@@ -540,6 +540,13 @@
                                         <action selector="placeOrder:" destination="p4X-hZ-NqN" eventType="touchUpInside" id="Dzt-XI-AnE"/>
                                     </connections>
                                 </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please check the form above before placing the order" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAV-9Q-x3l">
+                                    <rect key="frame" x="24" y="8" width="327" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <color key="textColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
@@ -599,7 +606,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                             <color key="value" red="0.21176470589999999" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -632,7 +639,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
                                                             <color key="value" red="0.21176470589999999" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -642,6 +649,42 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="60" id="dja-ZF-GNu">
+                                        <rect key="frame" x="0.0" y="199" width="375" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dja-ZF-GNu" id="KqH-Hb-g2A">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N6l-bb-pbG">
+                                                    <rect key="frame" x="8" y="19" width="105" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.21176470589999999" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-.-" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gpz-4X-Ex4">
+                                                    <rect key="frame" x="184" y="19" width="183" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.21176470589999999" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pam-2h-Sme">
+                                                    <rect key="frame" x="59" y="14" width="77" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="0.35294117650000001" green="0.38823529410000002" blue="0.43921568630000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <state key="normal" title="calculate">
+                                                        <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="calculateTotal:" destination="p4X-hZ-NqN" eventType="touchUpInside" id="LPq-7w-9Xj"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -656,8 +699,10 @@
                     </tableView>
                     <connections>
                         <outlet property="amountTxtFld" destination="nmL-1A-Jbv" id="UnT-ht-5WL"/>
+                        <outlet property="calculateTotalBttnOutlet" destination="Pam-2h-Sme" id="IUW-i2-8Lz"/>
                         <outlet property="placeOrderBttnOutlet" destination="OqX-Gv-hrl" id="snh-hs-Xj8"/>
                         <outlet property="rateTxtFld" destination="KBX-1g-91o" id="Aeu-MG-7KJ"/>
+                        <outlet property="totalLabel" destination="gpz-4X-Ex4" id="MZu-zR-HFx"/>
                         <outlet property="typeSegControlOutlet" destination="uG6-ek-Uhf" id="enN-SN-lV9"/>
                     </connections>
                 </tableViewController>

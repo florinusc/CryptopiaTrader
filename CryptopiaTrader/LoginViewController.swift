@@ -23,6 +23,13 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         loginBttnOutlet.layer.cornerRadius = 8.0
+        
+        if UserDefaults.standard.value(forKey: "key") != nil && UserDefaults.standard.value(forKey: "secret") != nil {
+            loginBttnOutlet.setTitle("Update", for: .normal)
+        } else {
+            loginBttnOutlet.setTitle("Log in", for: .normal)
+        }
+        
     }
     
     @IBOutlet weak var loginBttnOutlet: UIButton!

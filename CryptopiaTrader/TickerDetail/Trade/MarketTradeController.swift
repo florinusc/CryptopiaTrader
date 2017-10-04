@@ -37,6 +37,7 @@ class MarketTradeController: UITableViewController {
     @IBOutlet weak var rateTxtFld: UITextField!
     @IBOutlet weak var amountTxtFld: UITextField!
     @IBOutlet weak var typeSegControlOutlet: UISegmentedControl!
+    @IBOutlet weak var totalLabel: UILabel!
     
     @IBAction func typeSegControlAction(_ sender: UISegmentedControl) {
         let coinPairArr = coinPair.split(separator: "/")
@@ -53,6 +54,8 @@ class MarketTradeController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Customizing buttons
+        calculateTotalBttnOutlet.layer.cornerRadius = 8.0
         placeOrderBttnOutlet.layer.cornerRadius = 8.0
         
         let coinPairArr = coinPair.split(separator: "/")
@@ -106,68 +109,28 @@ class MarketTradeController: UITableViewController {
     
     @IBOutlet weak var placeOrderBttnOutlet: UIButton!
     @IBAction func placeOrder(_ sender: UIButton) {
-        if rateTxtFld.text != "" && amountTxtFld.text != "" {
-            
-            if let a = amountTxtFld.text, let r = rateTxtFld.text {
-                if let inputAmount = Double(a), let inputRate = Double(r) {
-                    if inputAmount < self.balance {
-                        
-                        guard let tradeType: String = typeSegControlOutlet.titleForSegment(at: typeSegControlOutlet.selectedSegmentIndex) else {return}
-                        
-                        if key != "" && secret != "" {
-                            ApiCalls().requestData(publicType: false, method: "SubmitTrade", parameters: ["TradePairId" : coinId, "Type" : tradeType, "Rate" : inputRate, "Amount" : inputAmount], key: key, secret: secret, completionHandler: { (data) in
-                                do {
-                                    let jsonData = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! NSDictionary
-                                    print(jsonData)
-                                    let successResponse = jsonData["Success"] as? Int
-                                    if successResponse == 1 {
-                                        DispatchQueue.main.async {
-                                            self.rateTxtFld.text = ""
-                                            self.amountTxtFld.text = ""
-                                            JSSAlertView().show(
-                                                self,
-                                                title: "Success",
-                                                text: "Your order has been placed successfully"
-                                            )
-                                        }
-                                    } else {
-                                        DispatchQueue.main.async {
-                                        JSSAlertView().danger(
-                                            self,
-                                            title: "Error",
-                                            text: "Your order could not be placed, please try again later"
-                                        )
-                                        }
-                                    }
-                                } catch let err {
-                                    print(err)
-                                }
-                            })
-                        } else {
-                            DispatchQueue.main.async {
-                            JSSAlertView().danger(
-                                self,
-                                title: "Error",
-                                text: "Please log in before trying to place an order"
-                            )
-                            }
-                        }
-                    } else {
-                        DispatchQueue.main.async {
-                        JSSAlertView().danger(
-                            self,
-                            title: "Error",
-                            text: "Insufficient funds"
-                        )
-                        }
-                    }
+        if key != "" && secret != "" {
+            if rateTxtFld.text != "" && amountTxtFld.text != "" {
+                DispatchQueue.main.async {
+                    guard let tradeType: String = self.typeSegControlOutlet.titleForSegment(at: self.typeSegControlOutlet.selectedSegmentIndex) else {return}
+                    guard let amount: String = self.amountTxtFld.text else {return}
+                    guard let rate: String = self.rateTxtFld.text else {return}
+                    let alertview = JSSAlertView().show(
+                        self,
+                        title: "New Order",
+                        text: "Are you sure you want to \(tradeType.lowercased()) \(amount) \(self.coinPair.split(separator: "/")[0]) at a rate of \(rate)?",
+                        buttonText: "Yes",
+                        cancelButtonText: "No" // This tells JSSAlertView to create a two-button alert
+                    )
+                    alertview.addAction(self.makeRequestToPlaceOrder)
                 }
+
             } else {
                 DispatchQueue.main.async {
                 JSSAlertView().danger(
                     self,
                     title: "Error",
-                    text: "Invalid input"
+                    text: "Please insert values in the rate and amount fields"
                 )
                 }
             }
@@ -176,8 +139,66 @@ class MarketTradeController: UITableViewController {
             JSSAlertView().danger(
                 self,
                 title: "Error",
-                text: "Please insert values in the rate and amount fields"
+                text: "Please log in before trying to place an order"
             )
+            }
+        }
+    }
+    
+    func makeRequestToPlaceOrder() {
+        if let a = amountTxtFld.text, let r = rateTxtFld.text {
+            if let inputAmount = Double(a), let inputRate = Double(r) {
+                if inputAmount < self.balance {
+                    
+                    guard let tradeType: String = typeSegControlOutlet.titleForSegment(at: typeSegControlOutlet.selectedSegmentIndex) else {return}
+                    
+                    ApiCalls().requestData(publicType: false, method: "SubmitTrade", parameters: ["TradePairId" : coinId, "Type" : tradeType, "Rate" : inputRate, "Amount" : inputAmount], key: key, secret: secret, completionHandler: { (data) in
+                        do {
+                            let jsonData = try JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! NSDictionary
+                            print(jsonData)
+                            let successResponse = jsonData["Success"] as? Int
+                            if successResponse == 1 {
+                                DispatchQueue.main.async {
+                                    self.rateTxtFld.text = ""
+                                    self.amountTxtFld.text = ""
+                                    self.totalLabel.text = "-.-"
+                                    JSSAlertView().show(
+                                        self,
+                                        title: "Success",
+                                        text: "Your order has been placed successfully"
+                                    )
+                                }
+                            } else {
+                                DispatchQueue.main.async {
+                                    JSSAlertView().danger(
+                                        self,
+                                        title: "Error",
+                                        text: "Your order could not be placed, please try again later"
+                                    )
+                                }
+                            }
+                        } catch let err {
+                            print(err)
+                        }
+                    })
+                    
+                } else {
+                    DispatchQueue.main.async {
+                        JSSAlertView().danger(
+                            self,
+                            title: "Error",
+                            text: "Insufficient funds"
+                        )
+                    }
+                }
+            }
+        } else {
+            DispatchQueue.main.async {
+                JSSAlertView().danger(
+                    self,
+                    title: "Error",
+                    text: "Invalid input"
+                )
             }
         }
     }
@@ -185,13 +206,35 @@ class MarketTradeController: UITableViewController {
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return headerTitle
     }
+    
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        let coin = coinPair.split(separator: "/")[1]
+        if let a = amountTxtFld.text, let r = rateTxtFld.text {
+            if let amount = Double(a), let rate = Double(r) {
+                totalLabel.text = String(amount*rate) + " " + coin
+            }
+        }
+    }
+    
+    
+    @IBOutlet weak var calculateTotalBttnOutlet: UIButton!
+    @IBAction func calculateTotal(_ sender: UIButton) {
+        view.endEditing(true)
+        let coin = coinPair.split(separator: "/")[1]
+        if let a = amountTxtFld.text, let r = rateTxtFld.text {
+            if let amount = Double(a), let rate = Double(r) {
+                totalLabel.text = String(amount*rate) + " " + coin
+            }
+        }
+    }
+    
 }
 
 extension MarketTradeController: UITextFieldDelegate {
     
     //this prohibits the user from typing in letters in the fields
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        
         let allowedCharacters = "0123456789."
         return allowedCharacters.contains(string) || range.length == 1
     }
