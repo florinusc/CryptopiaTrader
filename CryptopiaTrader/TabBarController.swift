@@ -28,7 +28,7 @@ class TabBarController: UITabBarController {
         
         //Customization for the tab bar items
         if let tabBarItems = tabBar.items {
-            tabBarItems[0].image = UIImage(named: "smallHive")
+            tabBarItems[0].image = UIImage(named: "list")
             tabBarItems[0].title = "Coin List"
             tabBarItems[1].image = UIImage(named: "account")
             tabBarItems[1].title = "Account"
@@ -42,7 +42,7 @@ class TabBarController: UITabBarController {
         //Configure the logo in the nav bar
         let logoImage = UIImage(named: "logoWhite")
         let logoImageView = UIImageView(image: logoImage)
-        logoImageView.contentMode = UIViewContentMode.scaleAspectFit
+        logoImageView.contentMode = UIViewContentMode.center
         self.navigationItem.titleView = logoImageView
         
         navigationController?.navigationBar.barTintColor = barColor

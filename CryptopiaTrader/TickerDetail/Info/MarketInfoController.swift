@@ -77,6 +77,7 @@ class MarketInfoController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let coin = coinPair.split(separator: "/")[0]
         let cell = tableView.dequeueReusableCell(withIdentifier: "MarketInfoCell", for: indexPath) as! MarketInfoCell
         
         if let tempInfo:MarketInfo = marketInfo {
@@ -100,7 +101,7 @@ class MarketInfoController: UITableViewController {
                 cell.numberLabel.text = String(format: "%.8f", tempInfo.Low)
             case 4:
                 cell.descriptionLabel.text = "Volume"
-                cell.numberLabel.text = String(format: "%.2f",tempInfo.Volume) + " BTC"
+                cell.numberLabel.text = String(format: "%.2f",tempInfo.Volume) + " " + String(coin)
             default:
                 break
             }

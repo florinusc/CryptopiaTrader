@@ -70,7 +70,8 @@ class MarketChartController: UITableViewController {
                 if data != nil {
                     do {
                         let jsonData = try JSONSerialization.jsonObject(with: data!, options: .mutableContainers) as! NSDictionary
-                        
+                        DispatchQueue.main.async {
+                        self.chartData.removeAll()
                         if let candleData = jsonData.value(forKey: "Candle") as? NSArray {
                             
                             for entry in candleData {
@@ -84,7 +85,7 @@ class MarketChartController: UITableViewController {
                             }
                         }
                         
-                        DispatchQueue.main.async {
+                        
                             self.tableView.reloadData()
                         }
                         
@@ -119,6 +120,10 @@ class MarketChartController: UITableViewController {
         // Stylize cell
         cell.selectionStyle = .none
         cell.backgroundColor = UIColor.clear
+        
+        for subview in cell.subviews {
+            subview.removeFromSuperview()
+        }
         
         let graphView = GraphView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 300))
         graphView.chartPeriod = chartPeriod

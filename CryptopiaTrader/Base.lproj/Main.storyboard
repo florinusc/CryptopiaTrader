@@ -260,7 +260,7 @@
                                     <action selector="loginBttn:" destination="W2y-JV-C44" eventType="touchUpInside" id="owh-GM-uHv"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="coloredLogo" translatesAutoresizingMaskIntoConstraints="NO" id="9Jd-CU-JzS">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="darkLogo" translatesAutoresizingMaskIntoConstraints="NO" id="9Jd-CU-JzS">
                                 <rect key="frame" x="60" y="105" width="255" height="63"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="255" id="LmH-aH-59f"/>
@@ -1194,7 +1194,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="coloredLogo" width="411" height="105"/>
+        <image name="darkLogo" width="682" height="341"/>
         <image name="redX" width="32" height="32"/>
     </resources>
 </document>
