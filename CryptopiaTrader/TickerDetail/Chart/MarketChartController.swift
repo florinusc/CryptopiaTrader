@@ -148,7 +148,7 @@ class MarketChartController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 0
+        return 5
     }
     
 }

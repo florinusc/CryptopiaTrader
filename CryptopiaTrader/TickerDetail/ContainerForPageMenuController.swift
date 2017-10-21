@@ -25,7 +25,7 @@ class ContainerForPageMenuController: UIViewController {
         //Setup for banner view
         //the real adUnitID is: ca-app-pub-9882773070772556/1173868841
         
-        bannerView.adUnitID = "ca-app-pub-9882773070772556/1173868841"
+        //bannerView.adUnitID = "ca-app-pub-9882773070772556/1173868841"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         

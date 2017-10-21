@@ -11,6 +11,9 @@ import JSSAlertView
 
 class MarketTradeController: UITableViewController {
 
+
+    
+    
     //getting the key
     var key: String {
         if UserDefaults.standard.value(forKey: "key") != nil {
@@ -72,6 +75,17 @@ class MarketTradeController: UITableViewController {
         //Setting up text field delegate
         rateTxtFld.delegate = self
         amountTxtFld.delegate = self
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(hideKeyBoard))
+        self.view.addGestureRecognizer(tap)
+    }
+    
+    @objc func hideKeyBoard(sender: UITapGestureRecognizer? = nil){
+        view.endEditing(true)
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 30
     }
     
     var headerTitle = "Not logged in" {
