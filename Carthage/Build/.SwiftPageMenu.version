@@ -1,0 +1,18 @@
+{
+  "iOS" : [
+    {
+      "hash" : "ebdda5b3dfb1d547df3df85b37cfa230fbdb4908a062d2a2d65488ead6cdc70b",
+      "name" : "SwiftPageMenu"
+    }
+  ],
+  "commitish" : "1.1.2",
+  "watchOS" : [
+
+  ],
+  "tvOS" : [
+
+  ],
+  "Mac" : [
+
+  ]
+}

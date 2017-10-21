@@ -1,0 +1,11 @@
+framework module SwiftPageMenu {
+  umbrella header "SwiftPageMenu.h"
+
+  export *
+  module * { export * }
+}
+
+module SwiftPageMenu.Swift {
+    header "SwiftPageMenu-Swift.h"
+    requires objc
+}

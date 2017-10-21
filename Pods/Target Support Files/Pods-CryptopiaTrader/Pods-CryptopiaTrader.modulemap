@@ -1,0 +1,6 @@
+framework module Pods_CryptopiaTrader {
+  umbrella header "Pods-CryptopiaTrader-umbrella.h"
+
+  export *
+  module * { export * }
+}

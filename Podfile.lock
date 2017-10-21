@@ -1,0 +1,36 @@
+PODS:
+  - Alamofire (4.5.1)
+  - CommonCrypto (1.1)
+  - CryptoSwift (0.7.1)
+  - Google-Mobile-Ads-SDK (7.24.1)
+  - JSSAlertView (3.0.4)
+  - PageMenu (2.0.0)
+  - Parchment (0.5.0)
+  - SwiftyBase64 (1.1.1)
+  - TextFieldEffects (1.3.3)
+
+DEPENDENCIES:
+  - Alamofire (~> 4.4)
+  - CommonCrypto
+  - CryptoSwift
+  - Google-Mobile-Ads-SDK
+  - JSSAlertView
+  - PageMenu
+  - Parchment
+  - SwiftyBase64 (~> 1.0)
+  - TextFieldEffects
+
+SPEC CHECKSUMS:
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
+  CommonCrypto: e18c8416332cca5efe80c197f2a522d471c42626
+  CryptoSwift: c290ac8976cf28c52c8b88bfe2c58c0302a0e0c0
+  Google-Mobile-Ads-SDK: ed8004a7265b424568dc84f3d2bbe3ea3fff958f
+  JSSAlertView: 7d8345c88e6fd8b515bc49f0fc8d8c69f6776b9c
+  PageMenu: 9c38fd7e0d9ef4b1408320f55bb907bbc0e538dc
+  Parchment: 23f5982fd7b22f200acbec6483452760de045391
+  SwiftyBase64: 8de4de96a08454e742fdda614dff12d2c62ecbe9
+  TextFieldEffects: 8706f53525f1ce51c8921b7af32237caab50c467
+
+PODFILE CHECKSUM: 998cfccae820bb8c8eb4ea0f52a923d2a261de57
+
+COCOAPODS: 1.3.1
