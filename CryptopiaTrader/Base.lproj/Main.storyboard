@@ -161,29 +161,16 @@
                                     <segue destination="2XY-98-U0U" kind="embed" identifier="containerSegue" id="jQV-Ty-QbD"/>
                                 </connections>
                             </containerView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iV4-GE-1u4" customClass="GADBannerView">
-                                <rect key="frame" x="27" y="617" width="320" height="50"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="SST-vu-SgV"/>
-                                    <constraint firstAttribute="width" constant="320" id="fMH-HS-jCm"/>
-                                </constraints>
-                            </view>
                         </subviews>
                         <color key="backgroundColor" red="0.86666666670000003" green="0.86666666670000003" blue="0.86666666670000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Sos-gA-6Rj" firstAttribute="leading" secondItem="Kn0-jH-U2w" secondAttribute="leading" id="2tB-t6-rT6"/>
-                            <constraint firstItem="iV4-GE-1u4" firstAttribute="top" secondItem="Sos-gA-6Rj" secondAttribute="bottom" constant="8" id="Mu8-FH-V6F"/>
-                            <constraint firstItem="iV4-GE-1u4" firstAttribute="bottom" secondItem="Kn0-jH-U2w" secondAttribute="bottom" id="RjX-mr-5pG"/>
+                            <constraint firstItem="Kn0-jH-U2w" firstAttribute="bottom" secondItem="Sos-gA-6Rj" secondAttribute="bottom" constant="58" id="RZ6-ql-7tb"/>
                             <constraint firstItem="Sos-gA-6Rj" firstAttribute="trailing" secondItem="Kn0-jH-U2w" secondAttribute="trailing" id="USS-aV-ePI"/>
-                            <constraint firstItem="iV4-GE-1u4" firstAttribute="centerX" secondItem="vtI-29-edb" secondAttribute="centerX" id="h4L-dy-Q2T"/>
                             <constraint firstItem="Sos-gA-6Rj" firstAttribute="top" secondItem="Kn0-jH-U2w" secondAttribute="top" id="qx1-76-Zql"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kn0-jH-U2w"/>
                     </view>
-                    <connections>
-                        <outlet property="bannerView" destination="iV4-GE-1u4" id="8Rq-ej-Usr"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WVs-8T-Hgi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

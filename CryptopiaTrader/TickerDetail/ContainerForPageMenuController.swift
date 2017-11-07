@@ -7,11 +7,8 @@
 //
 
 import UIKit
-import GoogleMobileAds
 
 class ContainerForPageMenuController: UIViewController {
-    
-    @IBOutlet weak var bannerView: GADBannerView!
     
     var coinPair = String()
     var coinId = Int()
@@ -21,13 +18,6 @@ class ContainerForPageMenuController: UIViewController {
         
         //Set title
         self.title = coinPair
-        
-        //Setup for banner view
-        //the real adUnitID is: ca-app-pub-9882773070772556/1173868841
-        
-        //bannerView.adUnitID = "ca-app-pub-9882773070772556/1173868841"
-        bannerView.rootViewController = self
-        bannerView.load(GADRequest())
         
     }
     
