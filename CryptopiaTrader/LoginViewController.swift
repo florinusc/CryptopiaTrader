@@ -27,7 +27,7 @@ class LoginViewController: UIViewController {
         if UserDefaults.standard.value(forKey: "key") != nil && UserDefaults.standard.value(forKey: "secret") != nil {
             loginBttnOutlet.setTitle("Update", for: .normal)
         } else {
-            loginBttnOutlet.setTitle("Log in", for: .normal)
+            loginBttnOutlet.setTitle("Log int", for: .normal)
         }
         
     }
