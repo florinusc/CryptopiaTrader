@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9F21256C1FBB300B00E8462D /* ChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F21256B1FBB300B00E8462D /* ChartCell.swift */; };
 		9F3266DB1F7BE1460024A224 /* AccountBalanceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3266DA1F7BE1460024A224 /* AccountBalanceViewController.swift */; };
 		9F3266DE1F7BE1DF0024A224 /* AccountPageMenuControllerForTicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3266DD1F7BE1DF0024A224 /* AccountPageMenuControllerForTicker.swift */; };
 		9F3266E31F7C0E180024A224 /* SweetHMAC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F3266E21F7C0E180024A224 /* SweetHMAC.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		4BE76CEE5F85D70D72748CE6 /* Pods-CryptopiaTrader.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptopiaTrader.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptopiaTrader/Pods-CryptopiaTrader.release.xcconfig"; sourceTree = "<group>"; };
+		9F21256B1FBB300B00E8462D /* ChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartCell.swift; sourceTree = "<group>"; };
 		9F3266DA1F7BE1460024A224 /* AccountBalanceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountBalanceViewController.swift; sourceTree = "<group>"; };
 		9F3266DD1F7BE1DF0024A224 /* AccountPageMenuControllerForTicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPageMenuControllerForTicker.swift; sourceTree = "<group>"; };
 		9F3266E11F7BEE970024A224 /* CryptopiaTrader-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CryptopiaTrader-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				9F99C0CA1F7A7E42002EB8CF /* MarketChartController.swift */,
+				9F21256B1FBB300B00E8462D /* ChartCell.swift */,
 			);
 			path = Chart;
 			sourceTree = "<group>";
@@ -302,7 +305,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9F99C09A1F7908E3002EB8CF /* Build configuration list for PBXProject "CryptopiaTrader" */;
+			buildConfigurationList = 9F99C09A1F7908E3002EB8CF /* Build configuration list for PBXProject "TopiaTrader" */;
 			compatibilityVersion = "Xcode 8.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -412,6 +415,7 @@
 				9FFA43D41F82799A0001A0E1 /* MarketTradesViewController.swift in Sources */,
 				9F99C0C21F7A54A3002EB8CF /* PriceLineView.swift in Sources */,
 				9F99C0C01F7A5297002EB8CF /* PageMenuControllerForTicker.swift in Sources */,
+				9F21256C1FBB300B00E8462D /* ChartCell.swift in Sources */,
 				9F4825F61F7F8B8100D48688 /* ApiCall.swift in Sources */,
 				9F3266DE1F7BE1DF0024A224 /* AccountPageMenuControllerForTicker.swift in Sources */,
 				9F99C0C81F7A7D48002EB8CF /* GraphView.swift in Sources */,
@@ -600,7 +604,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9F99C09A1F7908E3002EB8CF /* Build configuration list for PBXProject "CryptopiaTrader" */ = {
+		9F99C09A1F7908E3002EB8CF /* Build configuration list for PBXProject "TopiaTrader" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9F99C0AF1F7908E3002EB8CF /* Debug */,

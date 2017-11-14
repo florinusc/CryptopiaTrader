@@ -115,25 +115,12 @@ class MarketChartController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell()
-        
-        // Stylize cell
-        cell.selectionStyle = .none
-        cell.backgroundColor = UIColor.clear
-        
-        for subview in cell.subviews {
-            subview.removeFromSuperview()
-        }
-        
-        let graphView = GraphView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 300))
-        graphView.chartPeriod = chartPeriod
-        graphView.denomination = denomination
-        print("passing the following chart period: \(chartPeriod)")
-        graphView.graphData = Array(chartData.suffix(numberOfEntries))
-        
-        cell.addSubview(graphView)
 
-        cell.selectionStyle = .none
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ChartCell", for: indexPath) as! ChartCell
+        
+        cell.denomination = denomination
+        cell.chartPeriod = chartPeriod
+        cell.graphData = Array(chartData.suffix(numberOfEntries))
         
         return cell
         
